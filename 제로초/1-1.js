@@ -1,0 +1,1 @@
+document.head.parentNode.removeChild(document.head); //네이버 css벗겨보기
