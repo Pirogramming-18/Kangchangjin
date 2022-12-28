@@ -1,0 +1,83 @@
+/*Cascading Style Sheet*/
+/* block format context 알아두기 */
+*{
+
+} /* *은 '모든 태그' 의미*/
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+#header-center {
+    margin:0 auto;
+    width: 1190px;
+}
+
+#header-search h1{
+    width: 222px;
+    height: 50px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+    background-position: -15px -168px;
+    background-size: 470px 440px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    text-indent: 100%; /*들여쓰기*/
+    overflow: hidden; /*할당된 공간 밖으로 넘어갈 시 안보이게끔 함*/
+
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+#header-search a{
+    text-decoration: none; 
+}
+#header-search h2{
+    display: none; /*a 태그 클릭시 생기는 밑줄 안보이게 하기*/
+    
+}
+#header-search fieldset{
+    width: 520px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;
+    /* padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 0; */
+    border: 2px solid #03cf5d/*hex 표기법*/;
+    box-sizing: border-box; /*content,border,padding 모두 합쳐서 사이즈 재기*/
+
+    vertical-align: middle; 
+    position: relative;
+}
+#header-search fieldset input{ /*실제 검색창 부분*/
+    border: none;
+    padding: 0;
+    outline: none; /*실검색 부분 테두리 숨기기*/
+    vertical-align: top;
+
+    width: 453px;
+    height: 35px;
+}
+#header-search fieldset button{
+    width: 56px;
+    height: 58px;
+    border: none;
+    padding: 0;
+    background-color: #03cf5d;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+  
+    background-position: -833px -42px;
+    background-repeat: no-repeat;
+    
+
+    position: absolute;
+    right: -1px;
+    top: 1px;
+}
