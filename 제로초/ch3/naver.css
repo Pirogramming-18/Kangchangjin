@@ -1,4 +1,7 @@
 /*Cascading Style Sheet*/
+*{
+
+} /* *은 '모든 태그' 의미*/
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -25,6 +28,8 @@
     vertical-align: middle;
     text-indent: 100%; /*들여쓰기*/
     overflow: hidden; /*할당된 공간 밖으로 넘어갈 시 안보이게끔 함*/
+
+    vertical-align: middle; 
 }
 #header-search a{
     text-decoration: none; 
@@ -42,6 +47,13 @@
     padding-top: 12px;
     padding-bottom: 12px;
     padding-right: 0; */
-    border: 2px solid #03cf5d;
-   
+    border: 2px solid #03cf5d/*hex 표기법*/;
+    box-sizing: border-box; /*content,border,padding 모두 합쳐서 사이즈 재기*/
+
+    vertical-align: middle; 
+}
+#header-search fieldset input{ /*실제 검색창 부분*/
+    border: none;
+    padding: 0;
+    outline: none; /*실검색 부분 테두리 숨기기*/
 }
