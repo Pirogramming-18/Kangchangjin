@@ -29,7 +29,7 @@
     text-indent: 100%; /*들여쓰기*/
     overflow: hidden; /*할당된 공간 밖으로 넘어갈 시 안보이게끔 함*/
 
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 #header-search a{
     text-decoration: none; 
@@ -56,4 +56,16 @@
     border: none;
     padding: 0;
     outline: none; /*실검색 부분 테두리 숨기기*/
+}
+#header-search fieldset button{
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    background-color: #03cf5d;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+  
+    background-position: -833px -42px;
+    background-repeat: no-repeat;
+    margin: -11px;
 }
