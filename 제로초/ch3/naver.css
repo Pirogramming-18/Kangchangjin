@@ -1,0 +1,30 @@
+/*Cascading Style Sheet*/
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+#header-center {
+    margin:0 auto;
+    width: 1190px;
+}
+
+#header-search h1{
+    width: 222px;
+    height: 52px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+}
+#header-search h2{
+    display: none;
+    
+}
+#header-search fieldset{
+    width: 520px;
+    display: inline-block;
+}
