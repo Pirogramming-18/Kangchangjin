@@ -1,4 +1,18 @@
+/*Cascading Style Sheet*/
 #header-center {
     margin:0 auto;
     width: 1190px;
+}
+
+#header-search h1{
+    width: 222px;
+    display: inline-block;
+}
+#header-search h2{
+    display: none;
+    
+}
+#header-search fieldset{
+    width: 520px;
+    display: inline-block;
 }
