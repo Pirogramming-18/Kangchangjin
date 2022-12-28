@@ -45,11 +45,11 @@
     width: 520px;
     display: inline-block;
     margin-left: 20px;
-    padding: 12px 0 12px 10px;
-    /* padding-left: 10px;
-    padding-top: 12px;
+    padding: 2px 0 12px 12px;
+    /* padding-top: 2px;
+    padding-right: 0;
     padding-bottom: 12px;
-    padding-right: 0; */
+    padding-left: 12px; */
     border: 2px solid #03cf5d/*hex 표기법*/;
     box-sizing: border-box; /*content,border,padding 모두 합쳐서 사이즈 재기*/
 
@@ -62,22 +62,18 @@
     outline: none; /*실검색 부분 테두리 숨기기*/
     vertical-align: top;
 
-    width: 453px;
-    height: 35px;
+    width: 300px;
 }
 #header-search fieldset button{
-    width: 56px;
-    height: 58px;
+    width: 57px;
+    height: 59px;
+    padding: 0px;
     border: none;
-    padding: 0;
     background-color: #03cf5d;
     background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
-  
-    background-position: -833px -42px;
+    background-position: -834px -42px;
     background-repeat: no-repeat;
-    
-
     position: absolute;
-    right: -1px;
-    top: 1px;
+    right: -59px;
+    top: 0px;
 }
