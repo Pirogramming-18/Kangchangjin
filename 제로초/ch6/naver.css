@@ -12,6 +12,10 @@ html, body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.inline-block{
+    display: inline-block;
+}
+
 #fixed{
     position: fixed;
     top: 50px;
@@ -287,7 +291,13 @@ main{
      padding: 8px 10px 0;
      width: 1100px;
 }
+
+#main-first-block{
+display: inline-block;
+width: 100%;
+}
 #main-ad{
+    float: left;
     display: inline-block;
     width: 740px;
     height: 120px;
@@ -296,6 +306,8 @@ main{
     margin-bottom: 8px;
 }
 #main-login{
+    float: left;
+
     display: inline-block;
     width: 332px;
     height: 120px;
@@ -303,21 +315,58 @@ main{
     background-color: white;
     margin-bottom: 8px;
 }
+#main-second-block .inline-block:first-child{
+    width: 743px;
+}
+#main-second-block .inline-block:last-child{
+    width: 332px;
+    hei
+    vertical-align: top;
+}
+
 #main-ytn{
-    display: inline-block;
+    float: left;
     width: 740px;
     height: 46px;
     background-color: white;
     margin-bottom: 8px;
 }
-#main-newsstand{
+#main-ytn h3,#main-ytn ol{
     display: inline-block;
+}
+#main-newsstand{
+    float: left;
     width: 740px;
     height: 246px;
     background-color: white;
     margin-right: 8px;
     margin-bottom: 8px;
 }
+#main-newsstand h3{
+    height: 45px;
+    border-bottom: 1px solid #ebddf3;
+    
+}
+#main-newsstand ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main-newsstand li{
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #b9d5ff;
+    border-bottom: 1px solid #b9d5ff;
+    text-align: center;
+}
+
+#main-newsstand li img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 #main-weather{
     display: inline-block;
     width: 332px;
@@ -334,27 +383,38 @@ main{
     margin-bottom: 8px;
 }
 #main-category{
-    display: inline-block;
+    float: left;
     width: 740px;
     height: 837px;
     background-color: white;
+    margin-bottom: 8px;
+    margin-right: 8px;
 }
 #main-shopping{
-    display: inline-block;
+    float: left;
     width: 332px;
     height: 837px;
     background-color: white;
+    margin-bottom: 8px;
+    
 }
 #main-event{
-    display: inline-block;
+    float: left;
     width: 740px;
     height: 130px;
     background-color: white;
     vertical-align: top;
+    margin-right: 8px;
 }
 #main-third-ad{
     display: inline-block;
     width: 332px;
     height: 130px;
     background-color: #555;
+}
+#main-fourth-block{ /*마진충돌과 float문제를 해결하는 방법 inline-block;
+    width: 100%;*/
+    display: inline-block;
+    width: 100%;
+    
 }
