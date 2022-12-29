@@ -10,36 +10,35 @@
 <body>
     <header>
         <div id="fixed">고정</div>
-        <div>
-            <div style="float:right; background-color:red">dd</div>
+        <div style="float: right; background-color: red; height: 50px;">float</div>
+        <div >sdf</div>
+        <div class="center-align"> <!--가운데 정렬용 div -->
+        <!--css따로 안 만들고 html에 속성을 넣는 것을 in-line 방식이라고 한다. -->
+            <div>
+                <span>네이버를 시작페이지로</span>
+                <span>쥬니버네이버</span>
+                <span>해피빈</span>
+            </div>
+            <div id="header-search">
+                <a href="https://www.naver.com/">
+                    <h1>네이버</h1>
+                </a>
+            <h2 class="blind">검색창</h2> <!--id는 한 번만 사용가능, class는 중복으로 설정 가능 -->
+            <fieldset>
+                <legend class="blind">검색</legend>
+                <input type="text"/>
+                <!--<input type="checkbox"/>
+                <input type="radio" name="group"/>
+                <input type="radio" name="group"/>
+                <textarea></textarea>-->
+                <input>
+                <button>
+                    <span class="blind">검색</span>
+                    <span class="search-image"></span>
+                </button>
+            </fieldset>
+            </div>
         </div>
-    <div class="center-align"> <!--가운데 정렬용 div -->
-    <!--css따로 안 만들고 html에 속성을 넣는 것을 in-line 방식이라고 한다. -->
-    <div style="">
-        <span>네이버를 시작페이지로</span>
-        <span>쥬니버네이버</span>
-        <span>해피빈</span>
-    </div>
-    <div id="header-search">
-        <a href="https://www.naver.com/">
-            <h1>네이버</h1>
-        </a>
-    <h2 class="blind">검색창</h2> <!--id는 한 번만 사용가능, class는 중복으로 설정 가능 -->
-    <fieldset>
-        <legend class="blind">검색</legend>
-        <input type="text"/>
-        <!--<input type="checkbox"/>
-        <input type="radio" name="group"/>
-        <input type="radio" name="group"/>
-        <textarea></textarea>-->
-        <input>
-        <button>
-            <span class="blind">검색</span>
-            <span class="search-image"></span>
-        </button>
-    </fieldset>
-    </div>
-    </div>
     </header>
     <nav>
         <div class="center-align">

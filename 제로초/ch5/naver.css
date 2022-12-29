@@ -1,5 +1,8 @@
 /*Cascading Style Sheet*/
 /* block format context 알아두기 */
+/* float특성: 공중에 떠있어서 다음 컨텐츠가 밑으로 쏙 들어간다 */
+
+
 *{
     box-sizing: border-box;
 } /* *은 '모든 태그' 의미*/
@@ -32,6 +35,7 @@ html, body{
 .center-align {
     margin:0 auto;
     width: 1190px;
+    position: relative;
 }
 
 #header-search h1{
