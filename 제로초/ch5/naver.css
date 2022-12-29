@@ -38,7 +38,21 @@ html, body{
     position: relative;
 }
 
+#header-top{
+    float: right;
+}
+#header-top span{
+    color:#888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+    
+}
+
 #header-search h1{
+
+    clear: both;
+
     width: 222px;
     height: 50px;
     display: inline-block;
