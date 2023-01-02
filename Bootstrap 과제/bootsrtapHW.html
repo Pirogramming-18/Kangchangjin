@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrapHW</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  </head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-white sticky-top">
+        <!--fixed top으로 할시 모달이 안 나옴-->
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#"><h5>Pirogramming</h5></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <h6 class="nav-link disabled text-primary">kcj</h6>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#intro">Intro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Highlights">Highlights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallary">gallary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
+              </li>
+              <li class="nav-item"> <!--disabled속성 필요업지만 일단 대기-->
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-outline-success" data-bs-toggle="modal" href="#about" role="button">about</a>
+        </div>    
+        
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="about">
+        <div class="modal-dialog">
+            <div class="modal-content bg-secondary text-white text-center">
+                    <div class="modal-header">
+                        <h5 class="modal-title col text-center">피로그래밍 18기</h5>
+                        <!-- col text-center (열 기준)텍스트 가운데정렬-->                      
+                    </div>
+                    <div class="modal-body">
+                        fighting <br> keep running.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Download</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <div id="first" class="container-fluid text-center">
+      <h1 class="fw-bold">Pirogramming18</h1>
+      <h5>cheer up</h5>
+      <hr>
+      <a class="btn btn-primary text-white" href="#intro" role="button">Get Started</a>
+    </div>
+
+    <div id="intro" class="container-fluid text-center bg-secondary pb-3">
+      <div class="col h1 text-danger pt-5 pb-3 fw-bold">Built On the Bootstrap Grid</div>
+      <div class="col h9 text-white">
+        Bootstrap's responsive grid comes in 4sizes or 'breakpoints': tiny(xs)
+      </br>small(sm), medium(md) and large(lg). These 4 grid cites enables you
+      </br>creat responsive layouts that behave accordingly on different sizes
+      </div>
+      <br>
+      <a class="btn btn-light" href="#Highlights" role="button">Learn more</a>
+    </div>
+
+    <div id="Highlights" class="container-fluid text-center bg-secondary pb-3">
+      <h1 class="fw-bold text-primary">Flexiable Layouts</h1>
+      <hr class="text-dark">
+      <div class="container text-white pb-5">
+        <div class="row">
+            <div class="col">
+              <i class="bi bi-display fs-1"></i>
+              <h3 class="fw-bold">Responsive</h3>
+              <p class="h6 fw-bold">Yore cite looks good everywhere</p>
+            </div>
+            <div class="col">
+              <i class="bi bi-bag-check fs-1"></i>
+              <h3 class="fw-bold">Customizable</h3>
+              <p class="h6 fw-bold">Easy to theme and customize with SASS</p>
+            </div>
+            <div class="col">
+              <i class="bi bi-star fs-1"></i>
+              <h3 class="fw-bold">Consistent</h3>
+              <p class="h6 fw-bold">A mature, wekk-tested, stable codebase</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallary" class="container-fluid text-center bg-secondary pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="https://placeimg.com/200/200/animals/sepia" />
+          </div>
+          <div class="col">
+            <img src="https://placeimg.com/200/200/tech" />
+          </div>
+          <div class="col">
+            <img src="https://placeimg.com/200/200/any/grayscale" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img src="https://placeimg.com/200/200/architecture" />
+          </div>
+          <div class="col">
+            <img src="https://placeimg.com/200/200/nature" />
+          </div>
+          <div class="col">
+            <img src="https://placeimg.com/200/200/people" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="container-fluid text-center bg-secondary">
+      <h1 class="fw-bold text-primary">Get in Touch</h1>
+      <hr class="text-dark">
+      <div class="row">
+        <div class="col-4">
+          <input type="text" placeholder="name">
+        </div>
+        <div class="col-4">
+          <input type="text" placeholder="email">
+        </div>
+        <div class="col-4">
+          <input type="text" placeholder="pone">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <textarea row=auto placeholder="Your messages here"></textarea>
+        </div>
+      </div>
+        <button id="modal_open_btn" class="bg-primary border border-primary text-light">Send</button>
+    </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
