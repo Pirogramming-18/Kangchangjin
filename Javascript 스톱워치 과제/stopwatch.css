@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#all{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+.stopwatch,.records{
+    background-color: rgb(193, 233, 218);
+    height: 50vh;
+    width: 100vh;
+    border-radius: 10%;
+}
+
+.screen{
+    background-color: white;
+    width: 75vh;
+    height: 20%;
+    justify-items: center;
+}
