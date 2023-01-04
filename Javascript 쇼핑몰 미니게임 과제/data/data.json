@@ -1,14 +1,17 @@
 {
-    "items":[{"type":"t-shirt","gender":"female",
-    "size":"large",
-    "color":"pink",
-    "image":"../img/pink_t.png"},
+    "items":[
     {"type":"t-shirt","gender":"female",
     "size":"large",
     "color":"pink",
-    "image":"../img/pink_t.png"},
+    "image":"./img/pink_t.png"
+    },
+    {"type":"skirt","gender":"male",
+    "size":"large",
+    "color":"yellow",
+    "image":"./img/yellow_s.png"},
     {"type":"t-shirt","gender":"female",
     "size":"large",
-    "color":"pink",
-    "image":"../img/pink_t.png"}]
+    "color":"blue",
+    "image":"./img/blue_t.png"}
+    ]
 }
