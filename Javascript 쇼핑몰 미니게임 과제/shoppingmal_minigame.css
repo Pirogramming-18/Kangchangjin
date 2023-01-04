@@ -1,0 +1,93 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --base-space:8px;
+  --size-button:60px;
+  --size-border:4px;
+  --size-thumbnail:5 5px;
+  --font-size:18px;
+
+  /* animation */
+  --animation-duration: 300ms;
+}
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logo{
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+.logo:hover,.btn:hover{
+  transform: scale(1.1);
+}
+
+.btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+  margin-right: var(--base-space );
+}
+.buttons{
+  display: flex;
+  align-items: center;
+}
+.imgbtn{
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorbtn{
+  font-size: var(--font-size);
+  padding: calc(2*var(--base-space));
+  border-radius: var(--size-border);
+}
+.blue{
+  background-color: var(--color-blue);
+}
+.yellow{
+  background-color: var(--color-yellow);
+}
+.pink{
+  background-color: var(--color-pink);
+}
+
+.items{
+  width: 60%;
+  height: 60%;
+  list-style: none;
+  padding-left: 0;
+  overflow-y:scroll;/*item들이 많을 경우 
+  전체 페이지에서 스크롤되는 게 아닌 items 내에서 스크롤되게 함*/
+}
+.item{
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+}
+.item_thumbnail{
+width: var(--size-thumbnail);
+height: var(--size-thumbnail);
+}
+.item_description{
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
+}
