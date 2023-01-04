@@ -20,10 +20,40 @@ function createHTMLString(item){
     </li>
     `;
 }
+function onButtonClick(e,items){
+    const dataset=e.target.dataset;
+    const key=dataset.key;
+    const value=dataset.value;
+    
+    if(key==null||value==null){
+        return;
+    }
+    // displayItems(items.filter(item=>item[key]===value))
+    updateItems(items,key,value);
+}
+
+function updateItems(items,key,value){
+    items.forEach(items => {
+        if(item.datset[key]===value){
+            item.classList.remove('invisible');
+        }
+        else{
+            item.classList.add('invisible');
+        }
+    });
+}
+
+function setEventListeners(items){
+    const logo=document.querySelector('.logo');
+    const buttons=document.querySelector('.buttons');
+    logo.addEventListener('click',()=>displayItems(items));
+    buttons.addEventListener('click',Event=>onButtonClick(e,items));
+
+}
 //main
 loadItems()
     .then(items=>{
         displayItems(items);
-        // setEventListeners(items)
+        setEventListeners(items);
     })
     .catch(console.log);
