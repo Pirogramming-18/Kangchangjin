@@ -1,0 +1,14 @@
+{
+    "items":[{"type":"t-shirt","gender":"female",
+    "size":"large",
+    "color":"pink",
+    "image":"../img/pink_t.png"},
+    {"type":"t-shirt","gender":"female",
+    "size":"large",
+    "color":"pink",
+    "image":"../img/pink_t.png"},
+    {"type":"t-shirt","gender":"female",
+    "size":"large",
+    "color":"pink",
+    "image":"../img/pink_t.png"}]
+}
