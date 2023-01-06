@@ -16,10 +16,12 @@ while True:
         num+=counting
         player_change=1
         if num>=31:
+            print('playerB win!')
             break
 
     elif player_change==1:
         num+=counting
         player_change=0
         if num>=31:
+            print('playerA win!')
             break
