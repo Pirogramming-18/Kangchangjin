@@ -1,23 +1,25 @@
 import random
 num=0
 
+player_change=0 #a는 0 / b는 1
 while True:
     try:
-        counting_a=int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
-        if not 1<=counting_a<=3:
+        counting=int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
+        if not 1<=counting<=3:
             raise Exception('1,2,3 중 하나를 입력하세요')
-        # break
-        counting_b=int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
-        if not 1<=counting_b<=3:
-            raise Exception('1,2,3 중 하나를 입력하세요')
-        # break
     except ValueError:
         print('정수를 입력하세요')    
     except Exception as e:
         print(e)
-    num+=counting_a
-    counting_all=counting_a+counting_b
-    while num<counting_all:
-        num+=1
-        print('playerB : ',num)
-    break
+    
+    if player_change==0:
+        num+=counting
+        player_change=1
+        if num>=31:
+            break
+
+    elif player_change==1:
+        num+=counting
+        player_change=0
+        if num>=31:
+            break
