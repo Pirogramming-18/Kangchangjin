@@ -2,7 +2,8 @@ import random as R
 
 def brGame():
     num=0
-    player_change=0 #a는 0 / b는 1
+    player_change=0
+# player_change 0 : computer / 1 : player
 
     while True:
         if player_change==0:
@@ -18,7 +19,7 @@ def brGame():
             except Exception as e:
                 print(e)
                 continue
-
+# 입력부 끝
         if player_change==0:
             player_change=1
             counting_all=counting+num
@@ -26,9 +27,8 @@ def brGame():
                 num+=1
                 print('computer : ',num)
                 if num>=31:
-                    # print('playerB win!')
                     return player_change
-                
+#컴퓨터 일때 끝
 
         elif player_change==1:
             player_change=0
@@ -37,9 +37,10 @@ def brGame():
                 num+=1
                 print('player : ',num)
                 if num>=31:
-                    # print('playerB win!')
                     return player_change
-            
+#player 일때 끝
+           
+#함수 호출 및 승자 출력    
 br=brGame()
 if br==0:
     print('computer win!')
