@@ -12,3 +12,7 @@ while True:
         print('정수를 입력하세요')    
     except Exception as notrightnum:
         print('1,2,3 중 하나를 입력하세요')
+
+while num<counting:
+    num+=1
+    print('playerA : ',format(num))
