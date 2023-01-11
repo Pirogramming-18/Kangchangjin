@@ -119,6 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# 튜토리얼에서 안되서 구글링해서 추가한 부분
+STATICFILES_DIRS = [
+    BASE_DIR / 'css',
+] #
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
