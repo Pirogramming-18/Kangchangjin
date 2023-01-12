@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMovieReview</title>
+</head>
+<body>
+    <h2><header>myMovieReviews</header></h2>
+    <a href="/posts/{{ post.id }}/update" style="text-decoration: none;">리뷰 작성</a>
+    <hr/>
+    <h1>hi</h1>
+    {% for post in posts %}
+        <h1><a href="/posts/{{post.id}}">{{ post.title }}</a></h1>
+        <p>개봉년도 : {{post.year}}</p>
+        <p>장르 : {{post.genre}}</p>
+        <p>평점 : {{post.star}}</p>
+        <hr/>
+    {% endfor %}
+
+</body>
+</html>
