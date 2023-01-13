@@ -26,3 +26,19 @@ def create(request:HttpRequest,*args,**kwargs):
 def retrieve(request:HttpRequest,pk,*args,**kwargs):
     post=Post.objects.all().get(pk=pk)
     return render(request,"posts/retrieve.html",{'post':post})
+
+def update(request: HttpRequest,pk,*args,**kwargs):
+    post=Post.objects.get(id=pk)
+
+    if request.method=="POST":
+        title=request.POST["title"]
+        year=request.POST["year"]
+        genre=request.POST["genre"]
+        star=request.POST["star"]
+        runtime=request.POST["runtime"]
+        review=request.POST["review"]
+        director=request.POST["director"]
+        actor=request.POST["actor"]   
+        post.save()
+        return redirect(f"/posts/{post.id}")
+    return render(request,"posts/update.html",{"post":post})
