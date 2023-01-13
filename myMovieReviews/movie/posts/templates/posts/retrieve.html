@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-        <a href="/">
+        <a href="/" style="text-decoration: none;">
             <h2><header>myMovieReviews</header></h2>
         </a>
         <hr/>
         <h1>{{post.title}}</h1>
-        <a href="/posts/{{ post.id }}/update">수정하기</a>
+        <a href="/posts/{{ post.id }}/update" style="text-decoration: none;">수정하기</a>
         <form action="/posts/{{ post.id }}/delete" method="post">
             {% csrf_token %}
             <input type="submit" value="삭제하기"/>
