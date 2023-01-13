@@ -22,3 +22,7 @@ def create(request:HttpRequest,*args,**kwargs):
         )
         return redirect("/")
     return render(request,"posts/create.html")
+
+def retrieve(request:HttpRequest,pk,*args,**kwargs):
+    post=Post.objects.all().get(pk=pk)
+    return render(request,"posts/retrieve.html",{'post':post})
