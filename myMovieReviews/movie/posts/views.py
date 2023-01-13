@@ -42,3 +42,9 @@ def update(request: HttpRequest,pk,*args,**kwargs):
         post.save()
         return redirect(f"/posts/{post.id}")
     return render(request,"posts/update.html",{"post":post})
+
+def delete(request: HttpRequest,pk,*args,**kwargs):
+    if request.method=="POST":
+        post=Post.objects.get(pk=pk)
+        post.delete()
+    return redirect("/")
