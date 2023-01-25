@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여긴 홈페이지</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"/>
+    
+</head>
+<body>
+    <div class="imgdiv">
+        <img src="http://placeimg.com/300/500/any" alt="random-img">
+    </div>
+    <div class="contentdiv">
+        <small>{{post.user}}</small>
+        <small>{{post.content}}</small>
+    </div>
+    <div class="likediv">
+        <i class="fa-regular fa-heart like-btn" onclick="onClickLike()"></i>
+        <!--이건 채워진 하트 <i class="fa-solid fa-heart"></i> -->
+    </div>
+    <div class="commentdiv">
+        <input type="text" placeholder="댓글쓰기"/>
+        <button onclick="onClickPost()">포스팅</button>
+    </div>
+
+    <form action="{% url 'stagram:home' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" , value="go home" />
+    </form>
+
+  <script>
+    const strip = (string) => {
+   return string.replace(/^\s+|\s+$/g, "");
+ }; //앞뒤 공백 제거 함수 
+   const requestLike=new XMLHttpRequest();
+   let likey='False';
+
+   const onClickLike=()=>{ 
+       const url="like_ajax/";
+       requestLike.open("POST",url,true);
+       requestLike.setRequestHeader(
+           "Content-Type",
+           "application/x-www-form-urlencoded"
+       );
+       requestLike.send(JSON.stringify({likey:likey}));
+   };
+
+
+   requestLike.onreadystatechange=()=>{
+       if (requestLike.readyState === XMLHttpRequest.DONE) {
+           if (requestLike.status<400) {
+               const { like } =JSON.parse(requestLike.response);
+               const element = document.querySelector(".like-btn");
+               likey=like;
+               if (likey=='False'){
+                   element.classList.remove("fa-solid");
+                   element.classList.add("fa-regular");
+               }
+               else{
+                   element.classList.remove("fa-regular");
+                   element.classList.add("fa-solid");
+               }
+           }
+       }
+   };
+   const requestPost = new XMLHttpRequest();
+
+ </script>
+    <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
+</body>
+</html>
